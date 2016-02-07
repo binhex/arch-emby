@@ -10,11 +10,14 @@ ADD *.conf /etc/supervisor/conf.d/
 # add install bash script
 ADD install.sh /root/
 
+# add custom environment file for application
+ADD setup.sh /home/nobody/setup.sh
+
 # install app
 #############
 
 # make executable and run bash scripts to install app
-RUN chmod +x /root/install.sh && \
+RUN chmod +x /root/install.sh /home/nobody/setup.sh && \
 	/bin/bash /root/install.sh
 
 # docker settings
