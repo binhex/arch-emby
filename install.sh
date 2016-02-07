@@ -4,7 +4,7 @@
 set -e
 
 # define pacman packages
-pacman_packages="emby"
+pacman_packages="emby-server"
 
 # install pre-reqs
 pacman -Syu --ignore filesystem --noconfirm
