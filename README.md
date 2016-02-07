@@ -25,7 +25,7 @@ Please replace all user variables in the above command defined by <> with the co
 
 **Access application**<br>
 
-`http://<host ip>:8096`
+`<host ip>:8096`
 
 **Example**
 ```

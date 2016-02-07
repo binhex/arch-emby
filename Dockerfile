@@ -26,7 +26,7 @@ VOLUME /config
 # map /media to host defined media path (used to read/write to media library)
 VOLUME /media
 
-# expose port for http
+# expose port for server
 EXPOSE 8096
 
 # set environment variables for user nobody
