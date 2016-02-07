@@ -32,7 +32,7 @@ Please replace all user variables in the above command defined by <> with the co
 docker run -d \
 	-p 8096:8096 \
 	--name=<container name> \
-	-v /media/movies:/media \	
+	-v /media/movies:/media \
 	-v /apps/docker/emby/config:/config \
 	-v /etc/localtime:/etc/localtime:ro \
 	binhex/arch-emby
@@ -42,4 +42,4 @@ docker run -d \
 
 N/A
 
-[Support forum](http://lime-technology.com/forum/index.php?topic=45820.0)
+[Support forum](http://lime-technology.com/forum/index.php?topic=46382.0)
