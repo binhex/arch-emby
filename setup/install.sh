@@ -10,10 +10,6 @@ pacman_packages="emby-server"
 pacman -Syu --ignore filesystem --noconfirm
 pacman -S --needed $pacman_packages --noconfirm
 
-# set permissions
-chown -R nobody:users /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server
-chmod -R 775 /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server
-
 # cleanup
 yes|pacman -Scc
 rm -rf /usr/share/locale/*
