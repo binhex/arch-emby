@@ -38,8 +38,8 @@ else
 fi
 
 # set permissions inside container
-chown -R "${UID}":"${GID}" /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server
-chmod -R 775 /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server
+chown -R "${UID}":"${GID}" /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server /home/nobody
+chmod -R 775 /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server /home/nobody
 
 echo "[info] Starting Supervisor..."
 
