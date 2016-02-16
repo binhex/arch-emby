@@ -10,6 +10,9 @@ ADD setup/*.conf /etc/supervisor/conf.d/
 # add install bash script
 ADD setup/install.sh /root/
 
+# add bash scripts to set uid and gid and then set permissions
+ADD setup/init.sh /root/init.sh
+
 # add custom environment file for application
 ADD setup/setup.sh /home/nobody/setup.sh
 
@@ -17,7 +20,7 @@ ADD setup/setup.sh /home/nobody/setup.sh
 #############
 
 # make executable and run bash scripts to install app
-RUN chmod +x /root/install.sh /home/nobody/setup.sh && \
+RUN chmod +x /root/*.sh /home/nobody/*.sh && \
 	/bin/bash /root/install.sh
 
 # docker settings
