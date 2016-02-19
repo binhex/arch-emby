@@ -7,7 +7,6 @@ set -e
 pacman_packages="emby-server"
 
 # install pre-reqs
-pacman -Syu --ignore filesystem --noconfirm
 pacman -S --needed $pacman_packages --noconfirm
 
 # cleanup
