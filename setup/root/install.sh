@@ -4,10 +4,13 @@
 set -e
 
 # define pacman packages
-pacman_packages="emby-server"
+# pacman_packages=""
 
 # install pre-reqs
-pacman -S --needed $pacman_packages --noconfirm
+# pacman -S --needed $pacman_packages --noconfirm
+
+# call arch official repo script
+source /root/aor.sh
 
 # cleanup
 yes|pacman -Scc
