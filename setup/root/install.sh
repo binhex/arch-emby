@@ -9,7 +9,7 @@ set -e
 # install pre-reqs
 # pacman -S --needed $pacman_packages --noconfirm
 
-# call arch official repo script
+# call aor script (arch official repo)
 source /root/aor.sh
 
 # cleanup
