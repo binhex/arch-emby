@@ -6,7 +6,7 @@
 export MONO='/usr/bin/mono'
 export PROGRAM_DATA='/config'
 export FFMPEG='/usr/bin/ffmpeg'
-export FFPROBE='/uar/bin/ffprobe'
+export FFPROBE='/usr/bin/ffprobe'
 
 # kick off main process
 exec '/usr/bin/emby-server'
