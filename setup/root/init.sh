@@ -44,4 +44,4 @@ chmod -R 775 /etc/conf.d/emby-server /usr/lib/emby-server /usr/bin/emby-server /
 echo "[info] Starting Supervisor..."
 
 # run supervisor
-"/usr/bin/supervisord" -c "/etc/supervisor.conf" -n
+exec /usr/bin/supervisord -c /etc/supervisor.conf -n
