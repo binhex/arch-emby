@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # config below is taken from bash script /usr/bin/emby-server.sh
 
@@ -8,5 +8,5 @@ export PROGRAM_DATA='/config'
 export FFMPEG='/usr/bin/ffmpeg'
 export FFPROBE='/usr/bin/ffprobe'
 
-# kick off main process
+# run emby-server
 exec '/usr/bin/emby-server'
