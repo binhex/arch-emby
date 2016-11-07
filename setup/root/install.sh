@@ -30,7 +30,7 @@ fi
 ####
 
 # define arch official repo (aor) packages
-aor_package_name="emby-server"
+aor_packages="emby-server"
 
 # call aor script (arch official repo)
 source /root/aor.sh
