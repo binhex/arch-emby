@@ -30,7 +30,7 @@ fi
 ####
 
 # define arch official repo (aor) packages
-aor_packages="emby-server"
+aor_packages="skia-sharp58 dotnet-runtime emby-server"
 
 # call aor script (arch official repo)
 source /root/aor.sh
