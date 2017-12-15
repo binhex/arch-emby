@@ -15,6 +15,12 @@ unzip /tmp/scripts-master.zip -d /tmp
 # move shell scripts to /root
 mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 
+# custom scripts
+####
+
+# call custom install script
+source /root/custom.sh
+
 # pacman packages
 ####
 
@@ -30,7 +36,7 @@ fi
 ####
 
 # define arch official repo (aor) packages
-aor_packages="skia-sharp58 dotnet-host dotnet-runtime emby-server"
+aor_packages="skia-sharp58 emby-server"
 
 # call aor script (arch official repo)
 source /root/aor.sh
