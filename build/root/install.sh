@@ -15,17 +15,11 @@ unzip /tmp/scripts-master.zip -d /tmp
 # move shell scripts to /root
 mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 
-# custom scripts
-####
-
-# call custom install script
-source /root/custom.sh
-
 # pacman packages
 ####
 
 # define pacman packages
-pacman_packages=""
+pacman_packages="imagemagick mono referenceassemblies-pcl sqlite libx264 libvpx"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
@@ -36,7 +30,7 @@ fi
 ####
 
 # define arch official repo (aor) packages
-aor_packages="skia-sharp58 emby-server"
+aor_packages=""
 
 # call aor script (arch official repo)
 source /root/aor.sh
@@ -45,7 +39,7 @@ source /root/aor.sh
 ####
 
 # define aur packages
-aur_packages=""
+aur_packages="ffmpeg-headless emby-server-unlocked"
 
 # call aur install script (arch user repo)
 source /root/aur.sh
@@ -53,8 +47,8 @@ source /root/aur.sh
 # container perms
 ####
 
-# define comma separated list of paths 
-install_paths="/usr/lib/emby-server,/home/nobody"
+# define comma separated list of paths
+install_paths="/usr/lib/emby-server,/var/lib/emby,/home/nobody"
 
 # split comma separated string into list for install paths
 IFS=',' read -ra install_paths_list <<< "${install_paths}"
