@@ -19,7 +19,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 ####
 
 # define pacman packages
-pacman_packages="imagemagick mono referenceassemblies-pcl sqlite libx264 libvpx"
+pacman_packages="imagemagick mono referenceassemblies-pcl sqlite ffmpeg"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
@@ -39,7 +39,7 @@ source /root/aor.sh
 ####
 
 # define aur packages
-aur_packages="ffmpeg-headless emby-server-unlocked"
+aur_packages="emby-server-unlocked"
 
 # call aur install script (arch user repo)
 source /root/aur.sh
