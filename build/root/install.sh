@@ -19,7 +19,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 ####
 
 # define pacman packages
-pacman_packages="imagemagick mono referenceassemblies-pcl sqlite ffmpeg"
+pacman_packages="dotnet-runtime ffmpeg skia-sharp60 sqlite"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
@@ -30,7 +30,7 @@ fi
 ####
 
 # define arch official repo (aor) packages
-aor_packages=""
+aor_packages="emby-server"
 
 # call aor script (arch official repo)
 source /root/aor.sh
@@ -39,7 +39,7 @@ source /root/aor.sh
 ####
 
 # define aur packages
-aur_packages="emby-server-unlocked"
+aur_packages=""
 
 # call aur install script (arch user repo)
 source /root/aur.sh
