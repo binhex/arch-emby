@@ -3,6 +3,13 @@
 # exit script if return code != 0
 set -e
 
+# resetting to live repo and using pacman for this app.
+echo 'Server = http://mirror.bytemark.co.uk/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+echo 'Server = http://archlinux.mirrors.uk2.net/$repo/os/$arch' >> /etc/pacman.d/mirrorlist
+
+# sync package databases for pacman
+pacman -Syyu --noconfirm
+
 # build scripts
 ####
 
@@ -19,7 +26,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 ####
 
 # define pacman packages
-pacman_packages="dotnet-runtime ffmpeg skia-sharp60 sqlite"
+pacman_packages="dotnet-runtime ffmpeg skia-sharp60 sqlite emby-server"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
@@ -30,7 +37,7 @@ fi
 ####
 
 # define arch official repo (aor) packages
-aor_packages="emby-server"
+aor_packages=""
 
 # call aor script (arch official repo)
 source /root/aor.sh
