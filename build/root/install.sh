@@ -42,6 +42,15 @@ aur_packages=""
 # call aur install script (arch user repo)
 source /root/aur.sh
 
+# custom
+####
+
+# seek broken for emby web app, need to use a specific version of ffmpeg (4.0.2)
+# link to issue https://github.com/MediaBrowser/Emby/issues/3517#event-2096309256
+# mv arch installed version (4.1.0) and softlink emby version (4.0.2)
+mv /usr/bin/ffmpeg /usr/bin/ffmpeg-arch
+ln -s /usr/bin/ffmpeg-emby /usr/bin/ffmpeg
+
 # container perms
 ####
 
