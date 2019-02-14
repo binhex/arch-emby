@@ -3,9 +3,6 @@
 # exit script if return code != 0
 set -e
 
-# call pacman db and package updater script
-source /root/upd.sh
-
 # build scripts
 ####
 
@@ -20,6 +17,9 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /root/
 
 # pacman packages
 ####
+
+# call pacman db and package updater script
+source /root/upd.sh
 
 # define pacman packages
 pacman_packages="dotnet-runtime ffmpeg skia-sharp60 sqlite emby-server"
