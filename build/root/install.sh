@@ -22,7 +22,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /usr/local/bin/
 source upd.sh
 
 # define pacman packages
-pacman_packages="dotnet-runtime ffmpeg skia-sharp60 sqlite emby-server"
+pacman_packages="dotnet-runtime ffmpeg skia-sharp sqlite emby-server"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
