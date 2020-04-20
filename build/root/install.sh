@@ -50,6 +50,10 @@ ln -s /usr/bin/ffmpeg-emby /usr/bin/ffmpeg
 # container perms
 ####
 
+# path no longer created as part of the build, but still used to store program data,
+# thus create up front so we can set permissions correctly.
+mkdir -p /var/lib/emby
+
 # define comma separated list of paths
 install_paths="/usr/lib/emby-server,/var/lib/emby,/home/nobody"
 
