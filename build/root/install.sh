@@ -41,7 +41,7 @@ fi
 source upd.sh
 
 # define pacman packages
-pacman_packages="dotnet-runtime ffmpeg skia-sharp sqlite emby-server"
+pacman_packages="dotnet-runtime skia-sharp sqlite emby-server"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
