@@ -62,9 +62,14 @@ source aur.sh
 
 # seek broken for emby web app, need to use a specific version of ffmpeg (4.0.2)
 # link to issue https://github.com/MediaBrowser/Emby/issues/3517#event-2096309256
-# mv arch installed version (4.1.0) and softlink emby version (4.0.2)
+# mv arch installed version of ffmpeg and ffprobe (later version that causes issue)
 mv /usr/bin/ffmpeg /usr/bin/ffmpeg-arch
-ln -s /usr/bin/ffmpeg-emby /usr/bin/ffmpeg
+mv /usr/bin/ffprobe /usr/bin/ffprobe-arch
+
+# download static johnvansickle version (4.0.3)
+curl --connect-timeout 5 --max-time 600 --retry 5 --retry-delay 0 --retry-max-time 60 -o /tmp/ffmpeg.tar.xz -L https://github.com/binhex/packages/raw/master/static/x86-64/ffmpeg/johnvansickle/ffmpeg-4.0.3-64bit-static.tar.xz
+cd /tmp && tar -xvf /tmp/ffmpeg.tar.xz
+cp /tmp/ffmpeg*/ff* /usr/bin/
 
 # container perms
 ####
