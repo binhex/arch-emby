@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/dumb-init /bin/bash
 
 # config below is taken from bash script /usr/bin/emby-server.sh
 
