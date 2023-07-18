@@ -41,7 +41,7 @@ fi
 source upd.sh
 
 # define pacman packages
-pacman_packages="dotnet-runtime skia-sharp sqlite emby-server"
+pacman_packages="dotnet-runtime skia-sharp sqlite emby-server libva-intel-driver intel-media-driver intel-media-sdk onevpl-intel-gpu intel-compute-runtime"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
