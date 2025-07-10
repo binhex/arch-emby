@@ -22,8 +22,8 @@ fi
 # write RELEASETAG to file to record the release tag used to build the image
 echo "IMAGE_RELEASE_TAG=${RELEASETAG}" >> '/etc/image-release'
 
-# get target arch from Dockerfile argument
-TARGETARCH="${2}"
+# ensure we have the latest builds scripts
+refresh.sh
 
 # pacman packages
 ####
